@@ -135,6 +135,3 @@ def tensorProduct(matrix1, matrix2):
                 sub_list = []
                 check += 1
         return np.array(final_list)
-
-
-print(actionOnVector(np.array([[1j, 9 + 2j], [-3j, 8 - 5j]]), np.array([1j, 9 - 1j])))
