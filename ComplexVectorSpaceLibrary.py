@@ -59,7 +59,10 @@ def adjoint(any_vector):
     return conjugate(transpose(any_vector))
 
 
-# Accion de un vector
+def actionOnVector(matrix, vector):
+    return matrixProduct(matrix, transpose(vector))
+
+
 def matrixProduct(matrix1, matrix2):
     answer = np.array([[0 + 0j for i in range(len(matrix2[0]))] for x in range(len(matrix1))])
     for i in range(len(answer)):
@@ -132,3 +135,6 @@ def tensorProduct(matrix1, matrix2):
                 sub_list = []
                 check += 1
         return np.array(final_list)
+
+
+print(actionOnVector(np.array([[1j, 9 + 2j], [-3j, 8 - 5j]]), np.array([1j, 9 - 1j])))

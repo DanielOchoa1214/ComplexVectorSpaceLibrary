@@ -46,7 +46,10 @@ class TestComplexVectorSpaceLibrary(unittest.TestCase):
         matrix = np.array([[3 - 5j, 7 + 23j], [7 - 1j, -1j]])
         self.assertTrue((adjoint(matrix) == np.array([[3 + 5j, 7 + 1j], [7 - 23j, 1j]])).all())
 
-    # Accion de un vector
+    def test_actionOnVector(self):
+        matrix = np.array([[1j, 9 + 2j], [-3j, 8 - 5j]])
+        vector = np.array([1j, 9 - 1j])
+        self.assertTrue(np.array_equal(actionOnVector(matrix,vector), np.array([[82 + 9j], [70 - 53j]])))
 
     def test_matrixProduct(self):
         a = np.array([[3 + 6j, 5 - 9j], [1 + 1j, 6j]])
