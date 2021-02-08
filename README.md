@@ -34,5 +34,10 @@ Para hacer las prubas correr el archivo llamado ComplexVectorSpaceLibraryTests.p
 
 * Pycharm
 
+## Notas
+
+Para que el codigo funcionara de manera correcta, que no hubieran problemas con las longitudes de los vectores o al hacer algunas funciones, los vectores se tratan como vectores fila, tanto en la entrada como en la salida de datos.
+
+
 ## Autor 
 Daniel Sebastian Ochoa Urrego 
