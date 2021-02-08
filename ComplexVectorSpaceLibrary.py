@@ -123,15 +123,12 @@ def tensorProduct(matrix1, matrix2):
             answer = np.append(answer, scalarVectorMultiplication(i, matrix2))
         return answer
     if matrix1.ndim == 2 and matrix2.ndim == 2:
-        final_list, sub_list, count = [], [], len(matrix2)
+        final_list, sub_list = [], []
         for row1 in matrix1:
-            counter, check = 0, 0
-            while check < count:
+            for i in range(len(matrix2)):
                 for num1 in row1:
-                    for num2 in matrix2[counter]:
+                    for num2 in matrix2[i]:
                         sub_list.append(num1 * num2)
-                counter += 1
                 final_list.append(sub_list)
                 sub_list = []
-                check += 1
         return np.array(final_list)
